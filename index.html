@@ -197,6 +197,35 @@
             text-decoration: underline;
         }
 
+        @media (max-width: 600px) {
+            body {
+                min-height: 100vh;
+                min-height: 100dvh;
+                padding: 0;
+                align-items: stretch;
+            }
+
+            .mobile-frame {
+                width: 100%;
+                max-width: none;
+                height: 100vh;
+                height: 100dvh;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            header {
+                flex-shrink: 0;
+            }
+
+            .content {
+                flex: 1;
+                min-height: 0;
+                overflow-y: auto;
+            }
+        }
+
     </style>
 </head>
 <body>
