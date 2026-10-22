@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wayzata Basketball 8A2 Roster</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-navy: #102a45;
+            --accent-gold: #f0b429;
+            --bg-color: #ffffff;
+            --card-bg: #f8fafc;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f1f5f9;
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 16px;
+        }
+
+        .mobile-frame {
+            width: 100%;
+            max-width: 400px;
+            background-color: var(--bg-color);
+            border-radius: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 8px solid #0f172a;
+            position: relative;
+        }
+
+        header {
+            padding: 24px 20px 16px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        .logo-img {
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .header-title h1 {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--primary-navy);
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .header-title p {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .content {
+            padding: 24px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .page-heading h2 {
+            color: var(--primary-navy);
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+
+        .page-heading p {
+            margin-top: 4px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .table-wrap {
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        thead {
+            background-color: var(--primary-navy);
+            color: #ffffff;
+        }
+
+        th {
+            padding: 13px 16px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        th:first-child,
+        td.number {
+            width: 68px;
+            text-align: center;
+        }
+
+        td {
+            padding: 13px 16px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: var(--card-bg);
+        }
+
+        td.number {
+            color: var(--primary-navy);
+            font-weight: 800;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                min-height: 100vh;
+                min-height: 100dvh;
+                padding: 0;
+                align-items: stretch;
+            }
+
+            .mobile-frame {
+                width: 100%;
+                max-width: none;
+                height: 100vh;
+                height: 100dvh;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            header {
+                flex-shrink: 0;
+            }
+
+            .content {
+                flex: 1;
+                min-height: 0;
+                overflow-y: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-frame">
+        <header>
+            <div class="header-brand">
+                <img src="WayzataLogoTrans.png" alt="Trojans Logo" class="logo-img">
+                <div class="header-title">
+                    <h1>Wayzata 8A2</h1>
+                    <p>Traveling Youth Basketball</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <div class="page-heading">
+                <h2>Team Roster</h2>
+                <p>2026–2027 Season</p>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Player</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="number">00</td><td>Henry Adams</td></tr>
+                        <tr><td class="number">00</td><td>Chance Cramer</td></tr>
+                        <tr><td class="number">00</td><td>Darby Mason</td></tr>
+                        <tr><td class="number">00</td><td>Aiden Hoellein</td></tr>
+                        <tr><td class="number">00</td><td>Gavin Klein</td></tr>
+                        <tr><td class="number">00</td><td>Pavan Narasimha</td></tr>
+                        <tr><td class="number">00</td><td>Jackson Paukert</td></tr>
+                        <tr><td class="number">00</td><td>Kyle Pearson</td></tr>
+                        <tr><td class="number">00</td><td>Ethan Yopp</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
