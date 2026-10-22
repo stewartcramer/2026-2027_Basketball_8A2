@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournaments | Wayzata Basketball 8A2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-navy: #102a45;
+            --accent-gold: #f0b429;
+            --bg-color: #ffffff;
+            --card-bg: #f8fafc;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f1f5f9;
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 16px;
+        }
+
+        .mobile-frame {
+            width: 100%;
+            max-width: 400px;
+            background-color: var(--bg-color);
+            border-radius: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 8px solid #0f172a;
+            position: relative;
+        }
+
+        header {
+            padding: 24px 20px 16px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        .logo-img {
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .header-title h1 {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--primary-navy);
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .header-title p {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .content {
+            padding: 24px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .page-heading h2 {
+            color: var(--primary-navy);
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+
+        .page-heading p {
+            margin-top: 4px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .table-wrap {
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+        }
+
+        table {
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        thead {
+            background-color: var(--primary-navy);
+            color: #ffffff;
+        }
+
+        th {
+            padding: 12px 8px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        th:nth-child(1) {
+            width: 29%;
+        }
+
+        th:nth-child(2) {
+            width: 22%;
+        }
+
+        th:nth-child(3) {
+            width: 49%;
+        }
+
+        td {
+            padding: 12px 8px;
+            font-size: 0.76rem;
+            font-weight: 600;
+            line-height: 1.45;
+            overflow-wrap: anywhere;
+            vertical-align: top;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: var(--card-bg);
+        }
+
+        @media (min-width: 401px) {
+            th,
+            td {
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                min-height: 100vh;
+                min-height: 100dvh;
+                padding: 0;
+                align-items: stretch;
+            }
+
+            .mobile-frame {
+                width: 100%;
+                max-width: none;
+                height: 100vh;
+                height: 100dvh;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            header {
+                flex-shrink: 0;
+            }
+
+            .content {
+                flex: 1;
+                min-height: 0;
+                overflow-y: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-frame">
+        <header>
+            <div class="header-brand">
+                <img src="WayzataLogoTrans.png" alt="Trojans Logo" class="logo-img">
+                <div class="header-title">
+                    <h1>Wayzata 8A2</h1>
+                    <p>Traveling Youth Basketball</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <div class="page-heading">
+                <h2>Tournaments</h2>
+                <p>2026–2027 Season</p>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Dates</th>
+                            <th scope="col">Division</th>
+                            <th scope="col">Tournament</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Nov 7 - 8, 2026</td><td>Boys-8A</td><td>51st Annual OMGBA Boys TipOff Classic</td></tr>
+                        <tr><td>Nov 14 - 15, 2026</td><td>Boys-8A</td><td>Prior Lake P.L.A.Y. It Up Classic Boys Basketball Tournament</td></tr>
+                        <tr><td>Nov 21 - 22, 2026</td><td>Boys-8A</td><td>Rosemount Boys Irish Classic</td></tr>
+                        <tr><td>Dec 5 - 6, 2026</td><td>Boys-8A</td><td>Elk River Boys Classic</td></tr>
+                        <tr><td>Dec 12 - 13, 2026</td><td>Boys-8A</td><td>East Ridge Boys Raptor Classic</td></tr>
+                        <tr><td>Jan 9 - 10, 2027</td><td>Boys-8A</td><td>Blaine Invitational</td></tr>
+                        <tr><td>Jan 16, 2027</td><td>Boys-8A</td><td>Orono Boys Spartan Classic</td></tr>
+                        <tr><td>Jan 23 - 24, 2027</td><td>Boys-8A</td><td>Bloomington Boys Basketball Classic</td></tr>
+                        <tr><td>Feb 6 - 7, 2027</td><td>Boys-8AB</td><td>Armstrong Classic</td></tr>
+                        <tr><td>Feb 20 - 21, 2027</td><td>Boys-8A</td><td>Wayzata Boys Basketball Classic</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
