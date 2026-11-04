@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-navy: #102a45;
+            --accent-gold: #f0b429;
+            --bg-color: #ffffff;
+            --card-bg: #f8fafc;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f1f5f9;
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 16px;
+        }
+
+        .mobile-frame {
+            width: 100%;
+            max-width: 400px;
+            background-color: var(--bg-color);
+            border-radius: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 8px solid #0f172a;
+            position: relative;
+        }
+
+        header {
+            padding: 24px 20px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        .logo-img {
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .header-title h1 {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--primary-navy);
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .header-title p {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .home-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            color: var(--primary-navy);
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+        .home-link svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        .content {
+            padding: 24px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .page-heading h2 {
+            color: var(--primary-navy);
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+
+        .page-heading p {
+            margin-top: 4px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .table-wrap {
+            flex-shrink: 0;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+        }
+
+        table {
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        thead {
+            background-color: var(--primary-navy);
+            color: #ffffff;
+        }
+
+        th {
+            padding: 13px 16px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        th:first-child,
+        td.number {
+            width: 12%;
+            text-align: center;
+        }
+
+        th:nth-child(2) {
+            width: 13%;
+        }
+
+        th:nth-child(3) {
+            width: 29%;
+        }
+
+        th:nth-child(4) {
+            width: 46%;
+        }
+
+        td {
+            padding: 13px 16px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        td.thumbnail-cell {
+            padding-right: 4px;
+            padding-left: 4px;
+            text-align: center;
+        }
+
+        .player-photo {
+            display: block;
+            width: 25px;
+            height: 30px;
+            object-fit: cover;
+        }
+
+        .parents-cell {
+            padding-right: 4px;
+            padding-left: 4px;
+            font-size: 0.68rem;
+            line-height: 1.15;
+            overflow-wrap: anywhere;
+        }
+
+        .parents-cell div + div {
+            margin-top: 1px;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: var(--card-bg);
+        }
+
+        td.number {
+            color: var(--primary-navy);
+            font-weight: 800;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                min-height: 100vh;
+                min-height: 100dvh;
+                padding: 0;
+                align-items: stretch;
+            }
+
+            .mobile-frame {
+                width: 100%;
+                max-width: none;
+                height: 100vh;
+                height: 100dvh;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            header {
+                flex-shrink: 0;
+            }
+
+            .content {
+                flex: 1;
+                min-height: 0;
+                overflow-y: scroll;
+                -webkit-overflow-scrolling: touch;
+                overscroll-behavior-y: contain;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-frame">
+        <header>
+            <div class="header-brand">
+                <a href="index.html" style="text-decoration: none;">
+                    <img src="WayzataLogoTrans.png" alt="Trojans Logo" class="logo-img">
+                <div class="header-title">
+                    <h1>Wayzata 8A2</h1>
+                    <p>Traveling Youth Basketball</p></a>
+                </div>
+            </div>
+            <a class="home-link" href="index.html" aria-label="Return to home page">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 3 2 11h3v9h6v-6h2v6h6v-9h3L12 3z"></path>
+                </svg>
+            </a>
+        </header>
+
+        <main class="content">
+            <div class="page-heading">
+
+                <p>2026–2027 Season</p>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col" aria-label="Player photo"></th>
+                            <th scope="col">Player</th>
+                            <th scope="col">Parents</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="number">1</td>
+                            <td class="thumbnail-cell"><a href="henry-adams.jpeg" target="_blank" rel="noopener"><img src="henry-adams.jpeg" alt="Henry Adams" class="player-photo"></a></td>
+                            <td>Henry Adams</td>
+                            <td class="parents-cell"><div>Chris - 612-247-7738</div><div>Stephanie - 612-718-7734</div></td>
+                        </tr>
+                        <tr>
+                            <td class="number">32</td>
+                            <td class="thumbnail-cell"><a href="chance-cramer.jpeg" target="_blank" rel="noopener"><img src="chance-cramer.jpeg" alt="Chance Cramer" class="player-photo"></a></td>
+                            <td>Chance Cramer</td>
+                            <td class="parents-cell"><div>Stewart - 612-868-8870</div><div>Rainbow - 612-868-4825</div></td>
+                        </tr>
+                        <tr>
+                            <td class="number">22</td>
+                            <td class="thumbnail-cell"><a href="mason-darby.jpeg" target="_blank" rel="noopener"><img src="mason-darby.jpeg" alt="Mason Darby" class="player-photo"></a></td>
+                            <td>Mason Darby</td>
+                            <td class="parents-cell"><div>Tom - 612-432-1996</div><div>Jenny - 952-201-5615</div></td>
+                        </tr>
+                        <tr>
+                            <td class="number">4</td>
+                            <td class="thumbnail-cell"><a href="aiden-hoellein.jpeg" target="_blank" rel="noopener"><img src="aiden-hoellein.jpeg" alt="Aiden Hoellein" class="player-photo"></a></td>
+                            <td>Aiden Hoellein</td>
+                            <td class="parents-cell"><div>Shawn - 763-691-4998</div><div>Annie - 763-691-3512</div></td>
+                        </tr>
+                        <tr>
+                            <td class="number">5</td>
+                            <td class="thumbnail-cell"><a href="gavin-klein.jpeg" target="_blank" rel="noopener"><img src="gavin-klein.jpeg" alt="Gavin Klein" class="player-photo"></a></td>
+                            <td>Gavin Klein</td>
+                            <td class="parents-cell"><div>Dave - 612-578-3340</div><div>Melissa - 612-245-7488</div></td>
+                        </tr>
+                        <tr>
+                            <td class="number">23</td>
+                            <td class="thumbnail-cell"><a href="pavan-narasimha.jpeg" target="_blank" rel="noopener"><img src="pavan-narasimha.jpeg" alt="Pavan Narasimha" class="player-photo"></a></td>
+                            <td>Pavan Narasimha</td>
+                            <td class="parents-cell"><div>Vijay - 612-239-9672</div><div>Uma - 612-998-5714</div></td>
+                        </tr>
+                        <tr>
+                            <td class="number">12</td>
+                            <td class="thumbnail-cell"><a href="jackson-paukert.jpeg" target="_blank" rel="noopener"><img src="jackson-paukert.jpeg" alt="Jackson Paukert" class="player-photo"></a></td>
+                            <td>Jackson Paukert</td>
+                            <td class="parents-cell"><div>Jared - 612-889-9076</div><div>Emily - 612-889-9074</div></td>
+                        </tr>
+                        <tr>
+                            <td class="number">14</td>
+                            <td class="thumbnail-cell"><a href="kyle-pearson.jpeg" target="_blank" rel="noopener"><img src="kyle-pearson.jpeg" alt="Kyle Pearson" class="player-photo"></a></td>
+                            <td>Kyle Pearson</td>
+                            <td class="parents-cell"><div>Matt - 952-769-7033</div><div>Jodi - 770-687-1523</div></td>
+                        </tr>
+                        <tr>
+                            <td class="number">50</td>
+                            <td class="thumbnail-cell"><a href="ethan-yopp.jpeg" target="_blank" rel="noopener"><img src="ethan-yopp.jpeg" alt="Ethan Yopp" class="player-photo"></a></td>
+                            <td>Ethan Yopp</td>
+                            <td class="parents-cell"><div>Justin - 612-961-8129</div><div>Whitney - 612-237-5234</div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
